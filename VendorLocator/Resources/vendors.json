@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ven-001",
+    "name": "Mr D Pizza - Cape Town CBD",
+    "address": "12 Loop St, Cape Town, 8000",
+    "coordinate": {
+      "lat": -33.918861,
+      "lng": 18.423300
+    },
+    "isFavorite": false,
+    "updatedAt": "2025-06-01T12:00:00Z"
+  },
+  {
+    "id": "ven-002",
+    "name": "Mr D Sushi - Green Point",
+    "address": "Main Road, Green Point, Cape Town, 8051",
+    "coordinate": {
+      "lat": -33.907695,
+      "lng": 18.408058
+    },
+    "isFavorite": true,
+    "updatedAt": "2025-06-02T09:30:00Z"
+  },
+  {
+    "id": "ven-003",
+    "name": "Mr D Burgers - Gardens",
+    "address": "Kloof Street, Gardens, Cape Town, 8001",
+    "coordinate": {
+      "lat": -33.929570,
+      "lng": 18.413950
+    },
+    "isFavorite": false,
+    "updatedAt": "2025-06-03T15:45:00Z"
+  }
+]

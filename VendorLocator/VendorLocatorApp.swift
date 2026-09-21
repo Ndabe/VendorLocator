@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct VendorLocatorApp: App {
+    private let dependencies = AppDependencies()
+    
+    init() {
+        GoogleSDKConfiguration.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(dependencies: dependencies)
         }
     }
 }

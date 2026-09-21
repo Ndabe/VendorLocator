@@ -6,6 +6,11 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D54235B33061232200DBEED6 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = D54235B23061232200DBEED6 /* GoogleMaps */; };
+		D54235B63061232200DBEED6 /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = D54235B53061232200DBEED6 /* GooglePlaces */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D54235693061232200DBEED6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,12 +34,17 @@
 		D54235723061232200DBEED6 /* VendorLocatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VendorLocatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		D542355D3061232200DBEED6 /* VendorLocator */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VendorLocator;
-			sourceTree = "<group>";
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D54235CB3061232200DBEED6 /* Exceptions for "VendorLocator" folder in "VendorLocator" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D542355A3061232200DBEED6 /* VendorLocator */;
 		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
 		D542356B3061232200DBEED6 /* VendorLocatorTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = VendorLocatorTests;
@@ -45,12 +55,22 @@
 			path = VendorLocatorUITests;
 			sourceTree = "<group>";
 		};
+		D54235973061232200DBEED6 /* VendorLocator */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D54235CB3061232200DBEED6 /* Exceptions for "VendorLocator" folder in "VendorLocator" target */,
+			);
+			path = VendorLocator;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D54235583061232200DBEED6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				D54235B33061232200DBEED6 /* GoogleMaps in Frameworks */,
+				D54235B63061232200DBEED6 /* GooglePlaces in Frameworks */,
 			);
 		};
 		D54235653061232200DBEED6 /* Frameworks */ = {
@@ -69,7 +89,7 @@
 		D54235523061232200DBEED6 = {
 			isa = PBXGroup;
 			children = (
-				D542355D3061232200DBEED6 /* VendorLocator */,
+				D54235973061232200DBEED6 /* VendorLocator */,
 				D542356B3061232200DBEED6 /* VendorLocatorTests */,
 				D54235753061232200DBEED6 /* VendorLocatorUITests */,
 				D542355C3061232200DBEED6 /* Products */,
@@ -100,9 +120,13 @@
 			buildRules = (
 			);
 			fileSystemSynchronizedGroups = (
-				D542355D3061232200DBEED6 /* VendorLocator */,
+				D54235973061232200DBEED6 /* VendorLocator */,
 			);
 			name = VendorLocator;
+			packageProductDependencies = (
+				D54235B23061232200DBEED6 /* GoogleMaps */,
+				D54235B53061232200DBEED6 /* GooglePlaces */,
+			);
 			productName = VendorLocator;
 			productReference = D542355B3061232200DBEED6 /* VendorLocator.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +205,10 @@
 			);
 			mainGroup = D54235523061232200DBEED6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D54235B13061232200DBEED6 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				D54235B43061232200DBEED6 /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D542355C3061232200DBEED6 /* Products */;
 			projectDirPath = "";
@@ -296,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -354,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -374,11 +402,13 @@
 				DEVELOPMENT_TEAM = XZPS4G8QYJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VendorLocator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,11 +436,13 @@
 				DEVELOPMENT_TEAM = XZPS4G8QYJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VendorLocator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,7 +468,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XZPS4G8QYJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ndabe.personal.VendorLocatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,7 +490,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XZPS4G8QYJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ndabe.personal.VendorLocatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -548,6 +580,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D54235B13061232200DBEED6 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+		D54235B43061232200DBEED6 /* XCRemoteSwiftPackageReference "ios-places-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-places-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D54235B23061232200DBEED6 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D54235B13061232200DBEED6 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+		D54235B53061232200DBEED6 /* GooglePlaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D54235B43061232200DBEED6 /* XCRemoteSwiftPackageReference "ios-places-sdk" */;
+			productName = GooglePlaces;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D54235533061232200DBEED6 /* Project object */;
 	validationLevel = 1;
