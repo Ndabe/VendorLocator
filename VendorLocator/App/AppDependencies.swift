@@ -15,7 +15,7 @@ struct AppDependencies {
             forInfoDictionaryKey: "VendorAPIEndpoint"
         ) as? String,
            let endpoint = URL(string: endpointString),
-           endpoint.scheme != nil {
+              endpoint.scheme?.lowercased() == "https" {
             vendorLoader = URLSessionVendorLoader(
                 endpoint: endpoint,
                 tokenStore: KeychainTokenStore()
